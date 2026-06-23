@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nivel de Organización Biológico-Químico</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+body{
+background:linear-gradient(135deg,#06140b,#0f2f1d,#123d2a);
+color:white;
+overflow-x:hidden;
+}
+header{
+text-align:center;
+padding:40px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+box-shadow:0 0 20px rgba(0,255,128,.3);
+}
+h1{
+font-size:3rem;
+color:#7effb0;
+text-shadow:0 0 20px #00ff99;
+}
+.contenedor{
+width:90%;
+max-width:1000px;
+margin:auto;
+padding:30px;
+}
+.tarjeta{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+padding:25px;
+margin:25px 0;
+border-radius:25px;
+box-shadow:0 0 20px rgba(0,255,128,.2);
+transition:.5s;
+}
+.tarjeta:hover{
+transform:translateY(-8px);
+box-shadow:0 0 30px rgba(0,255,128,.5);
+}
+h2{
+color:#8effbc;
+margin-bottom:15px;
+}
+.contador{
+position:fixed;
+top:20px;
+right:20px;
+background:#00ff99;
+color:black;
+padding:15px;
+border-radius:20px;
+font-weight:bold;
+}
+footer{
+text-align:center;
+padding:20px;
+margin-top:40px;
+background:rgba(255,255,255,.08);
+}
+</style>
+</head>
+<body>
+<div class="contador">
+👁️ Visitas: <span id="visitas">0</span>
+</div>
+<header>
+<h1>Nivel de Organización Biológico-Químico</h1>
+<p>Proyecto de Biología</p>
+</header>
+<div class="contenedor">
+<div class="tarjeta">
+<h2>¿Qué es?</h2>
+<p>
+El nivel químico es el primer nivel de organización biológica y está formado por los átomos y moléculas que constituyen la materia viva.
+</p>
+</div>
+<div class="tarjeta">
+<h2>Átomos</h2>
+<p>
+Son las unidades fundamentales de la materia. Elementos como carbono, hidrógeno, oxígeno y nitrógeno forman parte de los seres vivos.
+</p>
+</div>
+<div class="tarjeta">
+<h2>Biomoléculas</h2>
+<p>
+Las biomoléculas permiten el crecimiento y funcionamiento adecuado de los organismos.
+</p>
+</div>
+<div class="tarjeta">
+<h2>Preguntas</h2>
+<p>¿Cuál es el primer nivel de organización biológica?</p>
+<p>¿Qué elementos forman parte de los seres vivos?</p>
+<p>¿Cuál es la función de las biomoléculas?</p>
+</div>
+</div>
+<footer>
+Proyecto: Nivel de Organización Biológico-Químico 🧪
+</footer>
+<script>
+let visitas = localStorage.getItem("visitas");
+if(visitas==null){
+visitas=1;
+}else{
+visitas++;
+}
+localStorage.setItem("visitas",visitas);
+document.getElementById("visitas").innerHTML=visitas;
+</script>
+</body>
+</html>
